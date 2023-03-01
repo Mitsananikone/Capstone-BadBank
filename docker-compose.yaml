@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  mongobadbank:
+    container_name: mongomarch1
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mitsananikone
+      MONGO_INITDB_ROOT_PASSWORD: Medlar75!
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  mongodata:
