@@ -4,7 +4,7 @@ ENV PORT 3000
 ENV MONGO_URL mongodb://mongobadbank:27017/badbank
 
 RUN mkdir -p /usr/index.js
-WORKDIR /usr/src/app
+WORKDIR /usr
 
 COPY package*.json /usr/index.js
 RUN npm install
